@@ -13,7 +13,7 @@ const validateInput = (value, unit, name) => {
 }
 
 
-// Validate inputs
+// Validate inputs-  passes in a value to be validated, along with its corresponding unit and a descriptive name.
 validateInput(initialVelocityKmHr, 'km/h', 'Initial Velocity');
 validateInput(accelerationMSq, 'm/s²', 'Acceleration');
 validateInput(timeSec, 's', 'Time');
@@ -23,6 +23,7 @@ validateInput(fuelBurnRateKgSec, 'kg/s', 'Fuel Burn Rate');
 
 // Conversion from m/s² to km/h²
 const accelerationKmHrSq = accelerationMSq * 3600 * 3600 / 1000;
+//there are 3600 seconds in an hour, and 1000 meters in a kilometer.
 
 // Function to calculate new velocity
 const calculateNewVelocity = (initialVelocity, acceleration, time) => {
@@ -51,3 +52,6 @@ const remainingFuel = calculateRemainingFuel(initialFuelKg, fuelBurnRateKgSec, t
 console.log(`New Velocity: ${newVelocity} km/h`);
 console.log(`New Distance: ${newDistance} km`);
 console.log(`Remaining Fuel: ${remainingFuel} kg`);
+
+//These lines print out the calculated values of the new velocity, 
+//new distance, and remaining fuel to the console, each with an appropriate label.
